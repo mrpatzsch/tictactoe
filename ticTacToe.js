@@ -22,16 +22,16 @@ window.onload = function() {
 	var boxes = document.getElementsByTagName('li');
 
 	var turnClick = function() {
-		if (event.target.value == 'o' || event.target.value == 'x') {
+		if (event.target.value == '1' || event.target.value == '2') {
 				alert("That spot is taken!");
 				clicks--;
 		}  else if (clicks % 2 === 0) {
 			event.target.style.backgroundImage = 'url(img/x.png)';
-			event.target.value = 'x';
+			event.target.value = 1;
 			header.innerHTML = "Now it's O's turn!";
-		}  else if (clicks %2 == '1') {
+		}  else if (clicks % 2 == '1') {
 			event.target.style.backgroundImage = 'url(img/o.png)';
-			event.target.value = 'o';
+			event.target.value = 2;
 			header.innerHTML = "Now it's X's turn!";
 		}
 	};
@@ -83,14 +83,14 @@ window.onload = function() {
 			if (clicks % 2 === 0) {
 						turnClick();
 					if (
-						box1.value == 'x' && box2.value == 'x' && box3.value == 'x' ||
-						box4.value == 'x' && box5.value == 'x' && box6.value == 'x' ||
-						box7.value == 'x' && box8.value == 'x' && box9.value == 'x' ||
-						box1.value == 'x' && box4.value == 'x' && box7.value == 'x' ||
-						box2.value == 'x' && box5.value == 'x' && box8.value == 'x' ||
-						box3.value == 'x' && box6.value == 'x' && box9.value == 'x' ||
-						box1.value == 'x' && box5.value == 'x' && box9.value == 'x' ||
-						box3.value == 'x' && box5.value == 'x' && box7.value == 'x') {
+						box1.value == '1' && box2.value == '1' && box3.value == '1' ||
+						box4.value == '1' && box5.value == '1' && box6.value == '1' ||
+						box7.value == '1' && box8.value == '1' && box9.value == '1' ||
+						box1.value == '1' && box4.value == '1' && box7.value == '1' ||
+						box2.value == '1' && box5.value == '1' && box8.value == '1' ||
+						box3.value == '1' && box6.value == '1' && box9.value == '1' ||
+						box1.value == '1' && box5.value == '1' && box9.value == '1' ||
+						box3.value == '1' && box5.value == '1' && box7.value == '1') {
 						xWins++;
 						scoreBoard();
 						alert("X wins!\nX has " + xWins + " wins\nO has " + oWins + " wins.");
@@ -106,14 +106,14 @@ window.onload = function() {
 				} else if (clicks % 2  === 1) {
 						turnClick();
 					} if (
-						box1.value == 'o' && box2.value == 'o' && box3.value == 'o' ||
-						box4.value == 'o' && box5.value == 'o' && box6.value == 'o' ||
-						box7.value == 'o' && box8.value == 'o' && box9.value == 'o' ||
-						box1.value == 'o' && box4.value == 'o' && box7.value == 'o' ||
-						box2.value == 'o' && box5.value == 'o' && box8.value == 'o' ||
-						box3.value == 'o' && box6.value == 'o' && box9.value == 'o' ||
-						box1.value == 'o' && box5.value == 'o' && box9.value == 'o' ||
-						box3.value == 'o' && box5.value == 'o' && box7.value == 'o') {
+						box1.value == '2' && box2.value == '2' && box3.value == '2' ||
+						box4.value == '2' && box5.value == '2' && box6.value == '2' ||
+						box7.value == '2' && box8.value == '2' && box9.value == '2' ||
+						box1.value == '2' && box4.value == '2' && box7.value == '2' ||
+						box2.value == '2' && box5.value == '2' && box8.value == '2' ||
+						box3.value == '2' && box6.value == '2' && box9.value == '2' ||
+						box1.value == '2' && box5.value == '2' && box9.value == '2' ||
+						box3.value == '2' && box5.value == '2' && box7.value == '2') {
 						oWins++;
 						scoreBoard();
 						alert("O wins!\nX has " + xWins + " wins\nO has " + oWins + " wins.");
