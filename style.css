@@ -8,6 +8,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   font-family: Helvetica;
+  height: 100%;
 
 }
 #start {
@@ -35,15 +36,17 @@ body {
   height: 31em;
   margin: 0 auto;
 }
+.main {
+  z-index: -100;
+}
 
 .box {
   width: 10em;
   height: 10em;
-  border-radius: 30px;
   display: inline-block;
   background-color: darkgrey;
   border: 1px solid black;
-  margin-bottom: 4px;
+  border-radius: 30px;
 }
 
 .box:hover {
@@ -58,13 +61,17 @@ text-decoration: underline;
 
 .score {
   position: relative;
-  top: -350px;
-  left: 250px;
+  top: -325px;
+  left: -250px;
   font-size: 26px;
   color: white;
   padding: 10px;
   z-index: -4;
+<<<<<<< HEAD
 }
 
 
 
+=======
+}
+>>>>>>> 8eb35da438b07e023b4a7e95b48a703d00cb41f7

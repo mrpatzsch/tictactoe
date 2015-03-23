@@ -1,7 +1,7 @@
 window.onload = function() {
   // YOUR CODE GOES HERE
 
-	var board = document.getElementById('board');
+	var myBoard = document.getElementById('board');
 	var clicks = 0;
 	var myButton = document.getElementById('myButton');
 	var clearScore = document.getElementById('clearSc');
@@ -19,6 +19,7 @@ window.onload = function() {
 	var scoreX = document.getElementById('x');
 	var scoreO = document.getElementById('o');
 	var head = document.getElementById('header');
+	var boxes = document.getElementsByTagName('li');
 
 	var turnClick = function() {
 		if (event.target.value == 'o' || event.target.value == 'x') {
@@ -67,8 +68,8 @@ window.onload = function() {
 		myReset();
 		xWins = 0;
 		oWins = 0;
-		scoreX.innerHTML = 'X: 0';
-		scoreO.innerHTML = 'O: 0';
+		scoreX.innerHTML = 'X: ' + ' ' + '0';
+		scoreO.innerHTML = 'O: ' + ' ' + '0';
 	};
 
 
@@ -77,8 +78,9 @@ window.onload = function() {
 		myReset();
 		clearScore();
 		document.getElementById('header').innerHTML = "Let's Play Tic Tac Toe! X goes first!";
-		board.onclick = function() {
-				if (clicks % 2 === 0) {
+		for (var i = 0; i < boxes.length; i++) {
+			boxes[i].onclick = function(event) {
+			if (clicks % 2 === 0) {
 						turnClick();
 					if (
 						box1.value == 'x' && box2.value == 'x' && box3.value == 'x' ||
@@ -125,6 +127,7 @@ window.onload = function() {
 								return;
 						}
 			clicks++;
-		};
+				};
+		}
 	};
 };
