@@ -21,17 +21,14 @@ window.onload = function() {
 	var head = document.getElementById('header');
 
 	var turnClick = function() {
-		if (event.target.value == 'o') {
+		if (event.target.value == 'o' || event.target.value == 'x') {
 				alert("That spot is taken!");
 				clicks--;
-		} else if (clicks % 2 === 0) {
+		}  else if (clicks % 2 === 0) {
 			event.target.style.backgroundImage = 'url(img/x.png)';
 			event.target.value = 'x';
 			header.innerHTML = "Now it's O's turn!";
-		} else if (event.target.value == 'x') {
-				alert("That spot is taken!");
-				clicks--;
-		} else {
+		}  else if (clicks %2 == '1') {
 			event.target.style.backgroundImage = 'url(img/o.png)';
 			event.target.value = 'o';
 			header.innerHTML = "Now it's X's turn!";

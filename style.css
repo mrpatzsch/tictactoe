@@ -5,10 +5,8 @@ h1 {
 }
 body {
   background-image: url('img/background.jpg');
-  background-color: black;
-  background-repeat: no-repeat;
-  background-position: center center;
   background-size: cover;
+  background-repeat: no-repeat;
   font-family: Helvetica;
 
 }
@@ -68,8 +66,5 @@ text-decoration: underline;
   z-index: -4;
 }
 
-#clearSc {
-  background-color: black;
-}
 
 
