@@ -12,28 +12,20 @@ body {
 
 }
 #start {
-  margin-left: 250px;
-  float: left;
   width: 200px;
   height: 60px;
   font-size: 24px;
   color: yellow;
   background-color: darkgrey;
 }
-
-#myButton {
-  margin-right: 250px;
-  float: right;
-  width: 200px;
-  height: 60px;
-  font-size: 24px;
-  color: red;
-  background-color: darkgrey;
+.startButton {
+  margin: 20px auto;
+  text-align: center;
 }
 
 #board {
-  width: 31em;
-  height: 31em;
+  width: 32em;
+  height: 32em;
   margin: 0 auto;
 }
 .main {
@@ -47,6 +39,7 @@ body {
   background-color: darkgrey;
   border: 1px solid black;
   border-radius: 30px;
+  list-style: none;
 }
 
 .box:hover {
@@ -67,11 +60,3 @@ text-decoration: underline;
   color: white;
   padding: 10px;
   z-index: -4;
-<<<<<<< HEAD
-}
-
-
-
-=======
-}
->>>>>>> 8eb35da438b07e023b4a7e95b48a703d00cb41f7

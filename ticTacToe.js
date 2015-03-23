@@ -75,7 +75,6 @@ window.onload = function() {
 
 //Start Button
 	startGame = function() {
-		myReset();
 		clearScore();
 		document.getElementById('header').innerHTML = "Let's Play Tic Tac Toe! X goes first!";
 		for (var i = 0; i < boxes.length; i++) {
